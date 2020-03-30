@@ -19,5 +19,5 @@ function fidesio_core_theme() {
  * Implements hook_cron().
  */
 function fidesio_core_cron() {
-  \Drupal::service('plugin.manager.migration')->excute('my_rss_importer');
+  \Drupal::service('excecute.migrate.plugin')->execute('my_rss_importer');
 }
