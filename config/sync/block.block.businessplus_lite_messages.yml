@@ -1,0 +1,22 @@
+uuid: f262f86e-04bf-4bc0-a289-030b5209b457
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - businessplus_lite
+_core:
+  default_config_hash: OgF5ktdnk3JjnW6lQSo5qloyxXKFHHKm2IN-3rRO3FA
+id: businessplus_lite_messages
+theme: businessplus_lite
+region: system_messages
+weight: -4
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

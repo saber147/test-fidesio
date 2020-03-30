@@ -1,0 +1,27 @@
+uuid: 6d152977-c8ef-44c4-8419-a6b2381a95e1
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - businessplus_lite
+_core:
+  default_config_hash: C5Gar9QtDBz7ggDi3KEQ0DWDdll6WewzwQ9rOjVNYGQ
+id: businessplus_lite_page_title
+theme: businessplus_lite
+region: content
+weight: -7
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

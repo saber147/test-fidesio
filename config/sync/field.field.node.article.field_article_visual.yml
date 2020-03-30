@@ -1,0 +1,28 @@
+uuid: cd47521f-3f12-4adb-9848-4c7229f755b2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_article_visual
+    - media.type.image
+    - node.type.article
+id: node.article.field_article_visual
+field_name: field_article_visual
+entity_type: node
+bundle: article
+label: 'Image d''article'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

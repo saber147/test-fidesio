@@ -1,0 +1,29 @@
+uuid: 81157c1c-0892-4e59-b6b2-58cb577f4b10
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.recherche
+  module:
+    - system
+    - views
+  theme:
+    - businessplus_lite
+id: formulaireexposerecherchepage_1
+theme: businessplus_lite
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:recherche-page_1'
+settings:
+  id: 'views_exposed_filter_block:recherche-page_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: /recherche
+    negate: false
+    context_mapping: {  }

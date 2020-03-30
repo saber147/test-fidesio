@@ -1,0 +1,36 @@
+uuid: bc3cf909-cdaf-40ed-b0bf-8148520db231
+langcode: fr
+status: true
+dependencies:
+  module:
+    - ctools
+    - system
+  theme:
+    - businessplus_lite
+_core:
+  default_config_hash: NJPBTJaVh3F2Y121uD_u0uklJSKJUqlJCmTcTpdzj5M
+id: businessplus_lite_content
+theme: businessplus_lite
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      article: article
+      page: page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

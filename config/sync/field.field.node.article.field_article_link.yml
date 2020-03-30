@@ -1,0 +1,23 @@
+uuid: cfe924af-e9b5-48c8-ae2c-229ba12bb770
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_article_link
+    - node.type.article
+  module:
+    - link
+id: node.article.field_article_link
+field_name: field_article_link
+entity_type: node
+bundle: article
+label: Lien
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

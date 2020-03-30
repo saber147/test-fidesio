@@ -1,0 +1,29 @@
+uuid: e555a852-c10e-4d5d-a112-c73819bceb20
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - businessplus_lite
+_core:
+  default_config_hash: qhwWijH0VnR2-e8lpm76jZwh0KeIhNzNUzCQ4L4LNEQ
+id: businessplus_lite_local_tasks
+theme: businessplus_lite
+region: content
+weight: -7
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

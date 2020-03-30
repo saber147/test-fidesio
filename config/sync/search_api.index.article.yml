@@ -1,0 +1,96 @@
+uuid: d4a084f8-2471-4cf8-bc8d-dff522e1d71b
+langcode: fr
+status: true
+dependencies:
+  module:
+    - elasticsearch_connector
+    - node
+    - elasticsearch_connector_autocomp
+    - search_api
+  config:
+    - field.storage.node.field_description
+    - field.storage.node.field_tags
+    - search_api.server.fidesio
+third_party_settings:
+  elasticsearch_connector:
+    ngram_filter_enabled: 1
+    ngram_config:
+      ngram_type: ngram
+      min_gram: '3'
+      max_gram: '4'
+id: article
+name: article
+description: ''
+read_only: false
+field_settings:
+  created:
+    label: 'Authored on'
+    datasource_id: 'entity:node'
+    property_path: created
+    type: date
+    dependencies:
+      module:
+        - node
+  field_description:
+    label: Description
+    datasource_id: 'entity:node'
+    property_path: field_description
+    type: text_ngram
+    dependencies:
+      config:
+        - field.storage.node.field_description
+  field_tags:
+    label: Étiquettes
+    datasource_id: 'entity:node'
+    property_path: field_tags
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_tags
+  title:
+    label: Titre
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text_ngram
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - article
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  highlight:
+    highlight: always
+    highlight_partial: true
+    excerpt: true
+    excerpt_length: 256
+    exclude_fields: {  }
+    prefix: '<strong>'
+    suffix: '</strong>'
+    weights:
+      postprocess_query: 0
+  ignorecase:
+    all_fields: false
+    fields:
+      - field_description
+      - title
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  language_with_fallback: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: fidesio

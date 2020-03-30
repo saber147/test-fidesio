@@ -1,0 +1,5 @@
+services:
+  excecute.migrate.plugin:
+    class: \Drupal\fidesio_core\ExecuteMigrationPlugin
+    arguments:
+      - '@plugin.manager.migration'

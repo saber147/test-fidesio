@@ -1,0 +1,29 @@
+uuid: 1b761425-c381-40f8-b441-ee0c77a44a8a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - facets.facet.tags
+  module:
+    - facets
+    - system
+  theme:
+    - businessplus_lite
+id: etiquettes
+theme: businessplus_lite
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facet_block:tags'
+settings:
+  id: 'facet_block:tags'
+  label: Étiquettes
+  provider: facets
+  label_display: visible
+  block_id: etiquettes
+visibility:
+  request_path:
+    id: request_path
+    pages: /recherche
+    negate: false
+    context_mapping: {  }

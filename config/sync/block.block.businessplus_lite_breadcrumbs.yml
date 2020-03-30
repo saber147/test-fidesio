@@ -1,0 +1,27 @@
+uuid: 3906900b-1f83-46be-9b22-c528f05dd19b
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - businessplus_lite
+_core:
+  default_config_hash: BONThtZ3rpCcUytZMkYw7vuWAKj8qN9k76l-ZpEOOqA
+id: businessplus_lite_breadcrumbs
+theme: businessplus_lite
+region: system_messages
+weight: -6
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

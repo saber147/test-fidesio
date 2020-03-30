@@ -1,0 +1,24 @@
+uuid: 07519c08-304e-483a-b909-b4b1608abda8
+langcode: fr
+status: true
+dependencies:
+  module:
+    - elasticsearch_connector
+id: fidesio
+name: fidesio
+description: ''
+backend: elasticsearch
+backend_config:
+  cluster_settings:
+    cluster: fidesio_cluster
+  fuzziness: auto
+  scheme: http
+  host: localhost
+  port: '9200'
+  path: ''
+  excerpt: false
+  retrieve_data: false
+  highlight_data: false
+  http_method: AUTO
+  autocorrect_spell: true
+  autocorrect_suggest_words: true

@@ -1,0 +1,25 @@
+uuid: 2685e6a7-aace-48ec-a7d0-276f317f6c86
+langcode: fr
+status: true
+dependencies:
+  config:
+    - search_api.index.article
+    - views.view.recherche
+  module:
+    - views
+    - search_api_autocomplete
+id: recherche
+label: Recherche
+index_id: article
+suggester_settings:
+  live_results:
+    fields: {  }
+    view_modes: {  }
+suggester_weights: {  }
+suggester_limits: {  }
+search_settings:
+  'views:recherche':
+    displays:
+      default: true
+      selected: {  }
+options: {  }

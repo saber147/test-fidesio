@@ -1,0 +1,61 @@
+id: my_rss_importer
+label: 'Import my RSS feed'
+status: true
+
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  urls: 'https://www.drupal.org/planet/rss.xml'
+  data_parser_plugin: xml
+
+  item_selector: /rss/channel/item
+  fields:
+    -
+      name: guid
+      label: GUID
+      selector: title
+    -
+      name: title
+      label: Title
+      selector: title
+    -
+      name: link
+      label: 'Origin link'
+      selector: link
+    -
+      name: description
+      label: Description
+      selector: description
+    -
+      name: pub_date
+      label: 'Publication date'
+      selector: pubDate
+
+  ids:
+    guid:
+      type: string
+
+destination:
+  plugin: 'entity:node'
+
+process:
+  title: title
+  field_article_link: link
+  field_description/value: description
+  field_description/format:
+    plugin: default_value
+    default_value: "full_html"
+  field_tags:
+    plugin: tags_random_generate
+    default_value: 1
+  created:
+    plugin: format_date
+    from_format: 'D, d M Y H:i:s O'
+    to_format: 'U'
+    source: pub_date
+  status:
+    plugin: default_value
+    default_value: 1
+  type:
+    plugin: default_value
+    default_value: article

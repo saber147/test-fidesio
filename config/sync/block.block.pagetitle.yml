@@ -1,0 +1,25 @@
+uuid: 66a85542-7a80-4b93-8fa4-3618feb166fb
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - businessplus_lite
+id: pagetitle
+theme: businessplus_lite
+region: banner
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

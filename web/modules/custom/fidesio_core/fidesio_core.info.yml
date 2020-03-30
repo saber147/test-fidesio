@@ -1,0 +1,7 @@
+name: Fidesio core
+description: Provides a central functionnalities.
+core: 8.x
+
+package: Custom
+
+type: module

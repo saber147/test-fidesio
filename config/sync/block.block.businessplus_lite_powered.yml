@@ -1,0 +1,22 @@
+uuid: c6b322b1-938d-400d-b5cf-814b5e53ac8a
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - businessplus_lite
+_core:
+  default_config_hash: j3eEF7RmxWV0MKBrVs5T-MMhZrDcz6kNBHwnqjv7omY
+id: businessplus_lite_powered
+theme: businessplus_lite
+region: footer_first
+weight: -7
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

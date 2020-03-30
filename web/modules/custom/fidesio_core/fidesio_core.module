@@ -1,0 +1,23 @@
+<?php
+use Drupal\migrate\MigrateMessage;
+use Drupal\migrate_plus\Entity\Migration;
+use Drupal\migrate_tools\MigrateExecutable;
+
+/**
+ * Implements hook_theme().
+ */
+function fidesio_core_theme() {
+  return array(
+    'last_articles_block' => array(
+      'variables' => array('articles' => NULL, 'count' => NULL),
+      'template' => 'Block/last-articles-block',
+    ),
+  );
+}
+
+/**
+ * Implements hook_cron().
+ */
+function fidesio_core_cron() {
+  \Drupal::service('plugin.manager.migration')->excute('my_rss_importer');
+}

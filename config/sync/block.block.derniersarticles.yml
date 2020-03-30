@@ -1,0 +1,28 @@
+uuid: e6532e8e-07f3-4232-b4bf-7dada8dd7cf3
+langcode: fr
+status: true
+dependencies:
+  module:
+    - fidesio_core
+    - system
+  theme:
+    - businessplus_lite
+id: derniersarticles
+theme: businessplus_lite
+region: highlighted_top
+weight: 0
+provider: null
+plugin: last_x_articles_block
+settings:
+  id: last_x_articles_block
+  label: 'Derniers articles'
+  provider: fidesio_core
+  label_display: '0'
+  last_articles_number: '3'
+  cache_invalidation: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

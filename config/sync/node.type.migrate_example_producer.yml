@@ -1,0 +1,13 @@
+uuid: c9ccd05e-2aa7-4d12-9c76-2fd4b8e0cc70
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: OHHNffqa__jzWnLEnKqyHnMSmftu2Ynj7LPIUJQl_js
+name: 'Wine Producer'
+type: migrate_example_producer
+description: 'Wineries, vineyards, and large producers.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

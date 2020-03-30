@@ -1,0 +1,14 @@
+uuid: d8b3e10f-0fe2-4b01-afe1-ab80cd639958
+langcode: fr
+status: '1'
+dependencies: {  }
+cluster_id: fidesio_cluster
+name: 'fidesio cluster'
+url: 'http://elasticsearch:9200'
+options:
+  multiple_nodes_connection: false
+  use_authentication: 0
+  authentication_type: Basic
+  username: ''
+  password: ''
+  timeout: '3'

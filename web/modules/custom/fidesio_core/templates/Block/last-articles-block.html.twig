@@ -1,0 +1,33 @@
+<div id="block-testimonials" class="clearfix block block-block-content">
+  <div class="content">
+    <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
+      <div class="view-mt-carousel view-testimonials-grid view view-mt-testimonials-carousel">
+        <div class="view-header">
+          <div class="container mt-carousel-testimonials-header">
+            <div class="icon">
+              <svg class="svg-inline--fa fa-quote-left fa-w-16" aria-hidden="true" data-prefix="fa" data-icon="quote-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"></path></svg>
+              <!-- <i class="fa fa-quote-left"><span class="sr-only">quote-left</span></i> -->
+            </div>
+
+            <h2 class="text-left">Les derniers {{ count }} articles </h2>
+          </div>
+        </div>
+
+        <div class="owl-carousel mt-carousel-container mt-carousel-testimonials owl-loaded owl-drag">
+          {% for article in articles %}
+            <div class="item">
+              <li class="mt-carousel-item">
+                <div class="views-field-title"><a href={{ path('entity.node.canonical', {'node': article.id}) }}>{{ article.title.value }}</a></div>
+                <div class="views-field-field-mt-tst-body">
+                  {{ article.field_description.value| raw  }}
+                </div>
+              </li>
+            </div>
+          {% endfor %}
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
